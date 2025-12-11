@@ -10,6 +10,8 @@ This project implements a **U-Net architecture in PyTorch** to segment the conju
 
 The primary output is a visual demonstration of model explainability. It shows the original eye image, the predicted segmentation mask, and the Grad-CAM heatmap overlaid, highlighting the exact regions the model focused on during the segmentation decision-making process.
 
+![XAI Visualization Output](https://github.com/nidhik5/Conjunctiva-Detection/blob/main/assets/Screenshot%202025-12-10%20192830.png)
+
 ##  What This Code Does
 
 ### 1. U-Net Segmentation Architecture
@@ -37,18 +39,6 @@ The script contains the `GradCAM` class, which showcases advanced PyTorch usage 
 * **Augmentation:** Horizontal flips (p=0.5), random brightness/contrast (p=0.2), rotation ±15° (p=0.3) using Albumentations.
 * **Loss Function:** Combined BCE + Dice Loss (0.5 weight each) for optimal segmentation performance.
 * **Optimizer:** Adam with learning rate 1e-4.
-
-### 4. Multi-Layer Grad-CAM Analysis
-
-The implementation supports Grad-CAM visualization at multiple network depths:
-
-| Layer | Purpose | What It Shows |
-| :--- | :--- | :--- |
-| **`bottleneck`** | Deepest layer (1024 channels) | High-level semantic understanding of conjunctiva |
-| **`enc4`** | Encoder layer 4 (512 channels) | High-level feature detection before bottleneck |
-| **`dec4`** | Decoder layer 4 (512 channels) | Early upsampling stage features |
-| **`dec1`** | Decoder layer 1 (64 channels) | Fine-grained spatial details near output |
-
 
 ### Key Metrics
 
