@@ -1,4 +1,3 @@
-# Conjunctiva-Detection
 #  Conjunctiva-Detection: Eye Segmentation + Grad-CAM
 
 ##  Context: Eye Conjunctiva Segmentation Dataset
@@ -79,7 +78,3 @@ This implementation demonstrates that the model correctly focuses on the conjunc
 ##  License
 
 MIT License
-
----
-
-**Note:** Update file paths in the code to match your local directory structure before running.
